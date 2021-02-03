@@ -87,7 +87,8 @@ const setQuestion = (viewIndex) => {
         document.getElementById('question').textContent = getQuestion(questions[viewIndex]);
         document.getElementById('info').textContent = viewIndex+1 + '/' + questionsMax;
     }else{
-        document.getElementById('question').textContent = "1から9までをえらんでください";
+        document.getElementById('info').textContent = "1から9までをえらんでください";
+        
     }
 }
 
