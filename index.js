@@ -6,7 +6,12 @@ const init =() => {
     questions =[];
     questionsMax = 0;
     viewIndex = 0;
+
+    document.getElementById('question').textContent = "";
+    document.getElementById('next').textContent = ">";
+    document.getElementById('back').textContent = "<";
     
+
     document.getElementById('start').style.display ="block";
     document.getElementById('question').style.display ="none";
     document.getElementById('info').style.display ="none";
@@ -98,7 +103,6 @@ const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
     if(document.getElementById('next').textContent === "END"){
-        document.getElementById('next').textContent = ">";
         init();
         return;
     }
