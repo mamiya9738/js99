@@ -78,17 +78,22 @@ const startClick = () => {
 
 // 問題文の設定
 const getQuestion = (question) => {
-    return question[0] + '×' + question[1] + ' = ' + question[0] * question[1]; 
+    return question[0] + '×' + question[1]; 
 }
 
+// 回答の設定
+const getAnswer = (question) => {
+    return question[0] * question[1]; 
+}
 // 問題文の表示
 const setQuestion = (viewIndex) => {
     if(questions.length > 0){
         document.getElementById('question').textContent = getQuestion(questions[viewIndex]);
+        document.getElementById('answer').textContent = getAnswer(questions[viewIndex]);
         document.getElementById('info').textContent = viewIndex+1 + '/' + questionsMax;
     }else{
         document.getElementById('info').textContent = "1から9までをえらんでください";
-        
+
     }
 }
 
