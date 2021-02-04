@@ -14,6 +14,7 @@ const init =() => {
 
     document.getElementById('start').style.display ="block";
     document.getElementById('question').style.display ="none";
+    document.getElementById('answer').style.display ="none";
     document.getElementById('info').style.display ="none";
     document.getElementById('back').style.display ="none";
     document.getElementById('next').style.display ="none";
@@ -46,6 +47,7 @@ const startClick = () => {
 
     // 出題ボタンとか出す
     document.getElementById('question').style.display ="block";
+    document.getElementById('answer').style.display ="block";
     document.getElementById('info').style.display ="block";
     document.getElementById('back').style.display ="block";
     document.getElementById('next').style.display ="block";
