@@ -2,6 +2,8 @@ let questions =[];
 let questionsMax = 0;
 let viewIndex = 0;
 const endMessage ='おわり';
+const backMessage ='もどる';
+const nextMessage ='すすむ';
 const init =() => {
 
     questions =[];
@@ -11,8 +13,8 @@ const init =() => {
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next').textContent = ">";
-    document.getElementById('back').textContent = "<";
+    document.getElementById('next').textContent = backMessage;
+    document.getElementById('back').textContent = nextMessage;
     
 
     document.getElementById('start').style.display ="block";
