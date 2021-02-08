@@ -1,13 +1,16 @@
 let questions =[];
 let questionsMax = 0;
 let viewIndex = 0;
+const endMessage ='おわり';
 const init =() => {
 
     questions =[];
     questionsMax = 0;
     viewIndex = 0;
 
-    document.getElementById('question').textContent = "";
+    document.getElementById('question-message').textContent = "";
+    document.getElementById('answer-message').textContent = "";
+    document.getElementById('info-message').textContent = "";
     document.getElementById('next').textContent = ">";
     document.getElementById('back').textContent = "<";
     
@@ -90,9 +93,9 @@ const getAnswer = (question) => {
 // 問題文の表示
 const setQuestion = (viewIndex) => {
     if(questions.length > 0){
-        document.getElementById('question').textContent = getQuestion(questions[viewIndex]);
-        document.getElementById('answer').textContent = getAnswer(questions[viewIndex]);
-        document.getElementById('info').textContent = viewIndex+1 + '/' + questionsMax;
+        document.getElementById('question-message').textContent = getQuestion(questions[viewIndex]);
+        document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
+        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questionsMax;
     }else{
         alert("1から9までをえらんでください");
         init();
@@ -110,7 +113,7 @@ const backClick = () => {
 const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
-    if(document.getElementById('next').textContent === "END"){
+    if(document.getElementById('next').textContent === endMessage){
         init();
         return;
     }
@@ -118,7 +121,7 @@ const nextClick = () => {
         setQuestion(++viewIndex);
     }
     else{
-        document.getElementById('next').textContent = "END";
+        document.getElementById('next').textContent = endMessage;
     }
 }
 

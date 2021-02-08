@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache">
-  <meta property="og:title" content="大人の人が子供に９９を出題するときのサイト">
+  <meta property="og:title" content="大人の人が子供に九九を出題するときのサイト">
   <meta property="og:type" content="website">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
@@ -23,38 +23,38 @@
 <body>
   <div class="container">
       <div class="row">
-        <h1>99出題メーカー２</h1>
+        <h1 class="text-center" >九九出題メーカー</h1>
         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
           <input type="checkbox" class="btn-check q-check" id="btncheck1" autocomplete="off" checked>
-          <label class="btn btn-outline-primary" for="btncheck1">1</label>
+          <label class="btn btn-outline-primary" for="btncheck1">１</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck2" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck2">2</label>
+          <label class="btn btn-outline-primary" for="btncheck2">２</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck3" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck3">3</label>
+          <label class="btn btn-outline-primary" for="btncheck3">３</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck4" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck4">4</label>
+          <label class="btn btn-outline-primary" for="btncheck4">４</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck5" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck5">5</label>
+          <label class="btn btn-outline-primary" for="btncheck5">５</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck6" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck6">6</label>
+          <label class="btn btn-outline-primary" for="btncheck6">６</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck7" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck7">7</label>
+          <label class="btn btn-outline-primary" for="btncheck7">７</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck8" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck8">8</label>
+          <label class="btn btn-outline-primary" for="btncheck8">８</label>
 
           <input type="checkbox" class="btn-check q-check" id="btncheck9" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btncheck9">9</label>
+          <label class="btn btn-outline-primary" for="btncheck9">９</label>
         </div>
       </div>
       <div class="row">
-          <div class="col align-self-center"><h1>出し方</h1></div>
+          <div class="col align-self-center"><h1 class="text-center" >出し方</h1></div>
           <div class="btn-group btn-lg btn-block role=group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="btnradio1">あがり</label>
@@ -68,17 +68,15 @@
       </div>
       
       <div class="row">
-          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="startClick()" id="start">スタート</button>
-      </div>
-      <div class="row">
-        <div class="alert alert-danger" id="question" role="alert"><h1></h1></div>
-        <button class="col btn btn-outline-secondary btn-lg" type="button" onclick="backClick()" id="back"><br>＜<br></button>
-        <button class="col btn btn-outline-secondary btn-lg" type="button" onclick="nextClick()" id="next"><br>＞<br></button>
-        <div class="alert alert-warning" id="answer" role="alert"><h1></h1></div>
-        <div class="alert alert-info" id="info" role="alert"><h1></h1></div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="startClick()" id="start">スタート</button>
+        <div class="alert alert-danger" id="question" role="alert"><h5 class="text-center" id="question-message"></h5></div>
+        <button class="col btn btn-outline-secondary btn-lg me-md-2" type="button" onclick="backClick()" id="back">もどる</button>
+        <button class="col btn btn-outline-secondary btn-lg" type="button" onclick="nextClick()" id="next">すすむ</button>
+        <div class="alert alert-warning" id="answer" role="alert"><h5 class="text-center" id="answer-message" ></h5></div>
+        <div class="alert alert-light" id="info" role="alert"><h5 class="text-center" id="info-message" ></h5</div>
       </div>
     </div>
-    </div>
+  </div>
 
 <script src="index.js"></script>
 
