@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>99出題メーカー</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta property="og:title" content="大人の人が子供に九九を出題するときのサイト">
   <meta property="og:type" content="website">
@@ -68,10 +68,10 @@
       </div>
       
       <div class="row">
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="startClick()" id="start">スタート</button>
+        <button type="button" class="btn btn-primary btn-block" onclick="startClick()" id="start">スタート</button>
         <div class="alert alert-danger" id="question" role="alert"><h5 class="text-center" id="question-message"></h5></div>
-        <button class="col btn btn-outline-secondary btn-lg btn-block me-md-2" type="button" onclick="backClick()" id="back">もどる</button>
-        <button class="col btn btn-outline-secondary btn-lg btn-block" type="button" onclick="nextClick()" id="next">すすむ</button>
+        <button class="col btn btn-outline-secondary me-md-2" type="button" onclick="backClick()" id="back">もどる</button>
+        <button class="col btn btn-outline-secondary" type="button" onclick="nextClick()" id="next">すすむ</button>
         <div class="alert alert-warning" id="answer" role="alert"><h5 class="text-center" id="answer-message" ></h5></div>
         <div class="alert alert-light" id="info" role="alert"><h5 class="text-center" id="info-message" ></h5</div>
       </div>
