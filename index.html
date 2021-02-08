@@ -23,7 +23,7 @@
 <body>
   <div class="container">
       <div class="row">
-        <h1 class="text-center" >九九出題メーカー</h1>
+        <h1 class="text-center" >・九九出題メーカー</h1>
         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
           <input type="checkbox" class="btn-check q-check" id="btncheck1" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="btncheck1">１</label>
@@ -70,8 +70,12 @@
       <div class="row">
         <button type="button" class="btn btn-primary btn-block" onclick="startClick()" id="start">スタート</button>
         <div class="alert alert-danger" id="question" role="alert"><h5 class="text-center" id="question-message"></h5></div>
+      </div>
+      <div class="row">
         <button class="col btn btn-outline-secondary me-md-2" type="button" onclick="backClick()" id="back">もどる</button>
         <button class="col btn btn-outline-secondary" type="button" onclick="nextClick()" id="next">すすむ</button>
+      </div>
+      <div class="row">
         <div class="alert alert-warning" id="answer" role="alert"><h5 class="text-center" id="answer-message" ></h5></div>
         <div class="alert alert-light" id="info" role="alert"><h5 class="text-center" id="info-message" ></h5</div>
       </div>
