@@ -13,8 +13,8 @@ const init =() => {
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next').textContent = backMessage;
-    document.getElementById('back').textContent = nextMessage;
+    document.getElementById('next').textContent = nextMessage;
+    document.getElementById('back').textContent = backMessage;
     
 
     document.getElementById('start').style.display ="block";
