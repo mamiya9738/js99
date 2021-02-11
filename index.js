@@ -13,8 +13,8 @@ const init =() => {
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next').textContent = nextMessage;
-    document.getElementById('back').textContent = backMessage;
+    document.getElementById('next-message').textContent = nextMessage;
+    document.getElementById('back-message').textContent = backMessage;
     
 
     document.getElementById('start').style.display ="block";
@@ -23,6 +23,8 @@ const init =() => {
     document.getElementById('info').style.display ="none";
     document.getElementById('back').style.display ="none";
     document.getElementById('next').style.display ="none";
+    document.getElementById('back-message').style.display ="none";
+    document.getElementById('next-message').style.display ="none";
 }
 init();
 
@@ -56,6 +58,8 @@ const startClick = () => {
     document.getElementById('info').style.display ="block";
     document.getElementById('back').style.display ="block";
     document.getElementById('next').style.display ="block";
+    document.getElementById('back-message').style.display ="block";
+    document.getElementById('next-message').style.display ="block";
 
     // モード
     console.log("--ソート前");
@@ -108,6 +112,7 @@ const setQuestion = (viewIndex) => {
 const backClick = () => {
     if(viewIndex > 0){
         setQuestion(--viewIndex);
+        document.getElementById('next-message').textContent = nextMessage;
     }
 }
 
@@ -115,15 +120,16 @@ const backClick = () => {
 const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
-    if(document.getElementById('next').textContent === endMessage){
+    if(document.getElementById('next-message').textContent === endMessage){
         init();
         return;
     }
-    if(viewIndex < questionsMax-1){
-        setQuestion(++viewIndex);
-    }
-    else{
-        document.getElementById('next').textContent = endMessage;
+    if(++viewIndex < questions.length){
+        setQuestion(viewIndex);
+        // 最後の表示内容になったときは「次へ」ボタンを終わりボタンに変更する
+        if(viewIndex+1 == questions.length){
+            document.getElementById('next-message').textContent = endMessage;
+        }
     }
 }
 
