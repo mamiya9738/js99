@@ -24,6 +24,7 @@
   <div class="container">
       <div class="row">
         <h1 class="text-center" >九九出題メーカー</h1>
+        <h5 class="text-center" >段</h5>
         <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
           <input type="checkbox" class="btn-check q-check" id="btncheck1" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="btncheck1">１</label>
@@ -54,7 +55,7 @@
         </div>
       </div>
       <div class="row">
-          <div class="col align-self-center"><h1 class="text-center" >出し方</h1></div>
+          <div class="col align-self-center"><h5 class="text-center" >出し方</h5></div>
           <div class="btn-group btn-lg btn-block role=group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="btnradio1">あがり</label>
@@ -66,6 +67,15 @@
             <label class="btn btn-outline-primary" for="btnradio3">まざり</label>
           </div>
       </div>
+      <div class="row">
+          <div class="col align-self-center"><h5 class="text-center" >答え</h5></div>
+          <div class="btn-group btn-lg btn-block role=group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio3" id="answer-view-off" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="answer-view-off">なし</label>
+            <input type="radio" class="btn-check" name="btnradio3" id="answer-view-on" autocomplete="off">
+            <label class="btn btn-outline-primary" for="answer-view-on">あり</label>
+          </div>
+      </div>
       
       <div class="row">
         <button type="button" class="btn btn-primary btn-block" onclick="startClick()" id="start">スタート</button>
@@ -74,13 +84,13 @@
         <div class="alert alert-light" id="info" role="alert"><h5 class="text-center" id="info-message" ></h5</div>
       </div>
       <div class="row">
-          <div class="btn-group btn-lg btn-block role=group" aria-label="Basic radio toggle button group">
-              <input type="radio" class="btn-check" name="btnradio2" id="back" onclick="backClick()" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="back" id="back-message" ></label>  
-              <input type="radio" class="btn-check" name="btnradio2" id="next" onclick="nextClick()" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="next" id="next-message"></label>
-            </div>
+        <div class="btn-group btn-lg btn-block role=group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio2" id="back" onclick="backClick()" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="back" id="back-message" ></label>  
+            <input type="radio" class="btn-check" name="btnradio2" id="next" onclick="nextClick()" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="next" id="next-message"></label>
         </div>
+      </div>
     </div>
   </div>
 

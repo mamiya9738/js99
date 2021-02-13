@@ -54,13 +54,15 @@ const startClick = () => {
 
     // 出題ボタンとか出す
     document.getElementById('question').style.display ="block";
-    document.getElementById('answer').style.display ="block";
     document.getElementById('info').style.display ="block";
     document.getElementById('back').style.display ="block";
     document.getElementById('next').style.display ="block";
     document.getElementById('back-message').style.display ="block";
     document.getElementById('next-message').style.display ="block";
-
+    // 答え出す時だけ回答枠表示
+    if(document.getElementById('answer-view-on').checked){
+        document.getElementById('answer').style.display ="block";
+    }
     // モード
     console.log("--ソート前");
     console.log(questions);
@@ -100,7 +102,9 @@ const getAnswer = (question) => {
 const setQuestion = (viewIndex) => {
     if(questions.length > 0){
         document.getElementById('question-message').textContent = getQuestion(questions[viewIndex]);
-        document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
+        if(document.getElementById('answer-view-on').checked){
+            document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
+        }
         document.getElementById('info-message').textContent = viewIndex+1 + '/' + questionsMax;
     }else{
         alert("1から9までをえらんでください");
