@@ -42,7 +42,7 @@ const startClick = () => {
       console.log(checkIndex +','+$checkElements[checkIndex].checked);
 
       if($checkElements[checkIndex].checked){
-          for(let i =0; i< max ;i++){
+          for(let i = 0; i < max ;i++){
             questions[questionsMax] = [checkIndex+1,i+1];
             questionsMax++;
           }
@@ -59,6 +59,7 @@ const startClick = () => {
     document.getElementById('next').style.display ="block";
     document.getElementById('back-message').style.display ="block";
     document.getElementById('next-message').style.display ="block";
+
     // 答え出す時だけ回答枠表示
     if(document.getElementById('answer-view-on').checked){
         document.getElementById('answer').style.display ="block";
