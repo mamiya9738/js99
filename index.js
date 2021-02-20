@@ -17,6 +17,9 @@ const init =() => {
     document.getElementById('back-message').textContent = backMessage;
     
 
+    document.getElementById('dan-list').style.display ="block";
+    document.getElementById('format-list').style.display ="block";
+    document.getElementById('answer-view').style.display ="block";
     document.getElementById('start').style.display ="block";
     document.getElementById('question').style.display ="none";
     document.getElementById('answer').style.display ="none";
@@ -30,20 +33,30 @@ init();
 
 //startボタン
 const startClick = () => {
-    // チェックボックス群
+    // チェックボックス群を変数に入れる
     const max = 9;
     const $checkElements = document.getElementsByClassName("q-check");
 
     const checkLen = $checkElements.length;
     let checkIndex = 0;
 
-    // チェックボックスがONの数値を配列に登録
+    // チェックボックスがONの段を配列に登録
     while(checkIndex < checkLen){
       console.log(checkIndex +','+$checkElements[checkIndex].checked);
 
       if($checkElements[checkIndex].checked){
-          for(let i = 0; i < max ;i++){
+        // 段の枠に選択数値を表示させる
+        if(questionsMax==0){
+            document.getElementById('dan-list-title').textContent += ":";
+        }else{
+            document.getElementById('dan-list-title').textContent += ",";
+        }
+        document.getElementById('dan-list-title').textContent += (checkIndex+1) + " ";
+
+        // 問題を作成し、配列に入れる
+        for(let i = 0; i < max ;i++){
             questions[questionsMax] = [checkIndex+1,i+1];
+            
             questionsMax++;
           }
       }
@@ -51,6 +64,12 @@ const startClick = () => {
     }
     // スタートボタンを消す
     document.getElementById('start').style.display ="none";
+
+    // 出題形式選択枠を消す
+    document.getElementById('dan-list').style.display ="none";
+    document.getElementById('format-list').style.display ="none";
+    document.getElementById('answer-view').style.display ="none";
+    
 
     // 出題ボタンとか出す
     document.getElementById('question').style.display ="block";
@@ -63,17 +82,24 @@ const startClick = () => {
     // 答え出す時だけ回答枠表示
     if(document.getElementById('answer-view-on').checked){
         document.getElementById('answer').style.display ="block";
+        document.getElementById('answer-view-title').textContent += (":あり");
+    }else{
+        document.getElementById('answer-view-title').textContent += (":なし");
     }
-    // モード
+
+    // 出題形式
     console.log("--ソート前");
     console.log(questions);
-    // さがり
+    //出題形式ごとで配列をそーとする
+    var formatMessage ="さがり";
     if(document.getElementById('btnradio2').checked){
+        // さがり
         console.log("--ソート(さがり)");
         questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
-    }
-    // ランダム
-    if(document.getElementById('btnradio3').checked){
+        formatMessage = "あがり";
+
+    }else if(document.getElementById('btnradio3').checked){
+        // ランダム
         console.log("--ソート(ランダム)");
         for(let i = questions.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
@@ -81,7 +107,9 @@ const startClick = () => {
             questions[i] = questions[j];
             questions[j] = tmp;
         }
+        formatMessage = "まざり";
     }
+    document.getElementById('format-list-title').textContent += (":"+formatMessage);
 
     console.log("--ソート後");
     console.log(questions);
