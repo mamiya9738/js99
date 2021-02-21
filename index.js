@@ -15,7 +15,10 @@ const init =() => {
     document.getElementById('info-message').textContent = "";
     document.getElementById('next-message').textContent = nextMessage;
     document.getElementById('back-message').textContent = backMessage;
-    
+    document.getElementById('dan-list-title').textContent = "段";
+    document.getElementById('answer-view-title').textContent = "答え";
+    document.getElementById('format-list-title').textContent = "出し方";
+
 
     document.getElementById('dan-list').style.display ="block";
     document.getElementById('format-list').style.display ="block";
