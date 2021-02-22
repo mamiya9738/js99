@@ -123,12 +123,12 @@ const startClick = () => {
 
 // 問題文の設定
 const getQuestion = (question) => {
-    return question[0] + '×' + question[1]; 
+    return '問題：' + question[0] + '×' + question[1]; 
 }
 
 // 回答の設定
 const getAnswer = (question) => {
-    return question[0] * question[1]; 
+    return '回答:' + question[0] * question[1]; 
 }
 // 問題文の表示
 const setQuestion = (viewIndex) => {
