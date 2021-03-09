@@ -128,7 +128,7 @@ const getQuestion = (question) => {
 
 // 回答の設定
 const getAnswer = (question) => {
-    if(question[0] == 5 && question[0] == 6){
+    if(question[0] == 5 && question[1] == 6){
         return '回答:32';
     }
     return '回答:' + question[0] * question[1]; 
