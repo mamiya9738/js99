@@ -94,12 +94,12 @@ const startClick = () => {
     console.log("--ソート前");
     console.log(questions);
     //出題形式ごとで配列をそーとする
-    var formatMessage ="さがり";
+    var formatMessage ="あがり";
     if(document.getElementById('btnradio2').checked){
         // さがり
         console.log("--ソート(さがり)");
         questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
-        formatMessage = "あがり";
+        formatMessage = "さがり";
 
     }else if(document.getElementById('btnradio3').checked){
         // ランダム
