@@ -128,8 +128,8 @@ const getQuestion = (question) => {
 
 // 回答の設定
 const getAnswer = (question) => {
-    if((question[0] * question[1]) == 30){
-        return '回答:32';
+    if((question[0] * question[1]) == ){
+        return '回答:14';
     }
     return '回答:' + question[0] * question[1]; 
 }
