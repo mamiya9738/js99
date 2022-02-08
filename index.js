@@ -128,9 +128,6 @@ const getQuestion = (question) => {
 
 // 回答の設定
 const getAnswer = (question) => {
-    if((question[0] * question[1]) == ){
-        return '回答:14';
-    }
     return '回答:' + question[0] * question[1]; 
 }
 // 問題文の表示
@@ -166,7 +163,7 @@ const nextClick = () => {
     if(++viewIndex < questions.length){
         setQuestion(viewIndex);
         // 最後の表示内容になったときは「次へ」ボタンを終わりボタンに変更する
-        if(viewIndex+1 == questions.length){
+        if(viewIndex + 1 == questions.length){
             document.getElementById('next-message').textContent = endMessage;
         }
     }
