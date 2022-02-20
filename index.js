@@ -156,6 +156,7 @@ const backClick = () => {
 const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
+    // 終わりぼたんをクリックしていたら
     if(document.getElementById('next-message').textContent === endMessage){
         init();
         return;
