@@ -109,7 +109,7 @@ const startClick = () => {
         }
         formatMessage = "まざり";
     }
-    document.getElementById('format-list-title').textContent += (":"+formatMessage);
+    document.getElementById('format-list-title').textContent += (":" + formatMessage);
 
     console.log("--ソート後");
     console.log(questions);
