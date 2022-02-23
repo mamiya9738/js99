@@ -48,13 +48,12 @@ const startClick = () => {
       console.log(checkIndex +','+$checkElements[checkIndex].checked);
 
       if($checkElements[checkIndex].checked){
+        var context = ",";
         // 段の枠に選択数値を表示させる
         if(questionsMax==0){
-            document.getElementById('dan-list-title').textContent += ":";
-        }else{
-            document.getElementById('dan-list-title').textContent += ",";
+            context = ";";
         }
-        document.getElementById('dan-list-title').textContent += (checkIndex+1) + " ";
+        document.getElementById('dan-list-title').textContent += context + (checkIndex+1) + " ";
 
         // 問題を作成し、配列に入れる
         for(let i = 0; i < max ;i++){
