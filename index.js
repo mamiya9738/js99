@@ -4,6 +4,8 @@ let viewIndex = 0;
 const endMessage ='おわり';
 const backMessage ='もどる';
 const nextMessage ='すすむ';
+const cancelMessage ='キャンセル';
+
 const init =() => {
 
     questions =[];
@@ -18,6 +20,7 @@ const init =() => {
     document.getElementById('dan-list-title').textContent = "段";
     document.getElementById('answer-view-title').textContent = "答え";
     document.getElementById('format-list-title').textContent = "出し方";
+    document.getElementById('start').textContent = "スタート";
 
 
     document.getElementById('dan-list').style.display ="block";
@@ -36,6 +39,12 @@ init();
 
 //startボタン
 const startClick = () => {
+
+    if(document.getElementById('start').textContent === cancelMessage){
+        init();
+        return;
+    }
+
     // チェックボックス群を変数に入れる
     const max = 9;
     const $checkElements = document.getElementsByClassName("q-check");
@@ -65,8 +74,8 @@ const startClick = () => {
       }
       checkIndex++;
     }
-    // スタートボタンを消す
-    document.getElementById('start').style.display ="none";
+    // スタートボタンをキャンセルボタンにする
+    document.getElementById('start').textContent = cancelMessage;
 
     // 出題形式選択枠を消す
     document.getElementById('dan-list').style.display ="none";
@@ -156,7 +165,7 @@ const backClick = () => {
 const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
-    // 終わりぼたんをクリックしていたら
+    // 終わりボタンをクリックしていたら
     if(document.getElementById('next-message').textContent === endMessage){
         init();
         return;
