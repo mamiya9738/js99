@@ -97,19 +97,19 @@ const startClick = () => {
     }
 
     // 出題形式
-    console.log("--ソート前");
-    console.log(questions);
+    // console.log("--ソート前");
+    // console.log(questions);
     //出題形式ごとで配列をそーとする
     var formatMessage ="あがり";
     if(document.getElementById('btnradio2').checked){
         // さがり
-        console.log("--ソート(さがり)");
+        // console.log("--ソート(さがり)");
         questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
         formatMessage = "さがり";
 
     }else if(document.getElementById('btnradio3').checked){
         // ランダム
-        console.log("--ソート(ランダム)");
+        // console.log("--ソート(ランダム)");
         for(let i = questions.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
             let tmp = questions[i];
@@ -120,8 +120,8 @@ const startClick = () => {
     }
     document.getElementById('format-list-title').textContent += (":" + formatMessage);
 
-    console.log("--ソート後");
-    console.log(questions);
+    // console.log("--ソート後");
+    // console.log(questions);
     // 出題
     viewIndex = 0;
     setQuestion(viewIndex);
