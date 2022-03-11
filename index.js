@@ -136,6 +136,7 @@ const getQuestion = (question) => {
 const getAnswer = (question) => {
     return '回答:' + question[0] * question[1]; 
 }
+
 // 問題文の表示
 const setQuestion = (viewIndex) => {
     if(questions.length > 0){
