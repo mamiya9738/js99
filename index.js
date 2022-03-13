@@ -6,7 +6,7 @@ const backMessage ='もどる';
 const nextMessage ='すすむ';
 const cancelMessage ='キャンセル';
 
-init =() => {
+const init =() => {
 
     questions =[];
     questionsMax = 0;
@@ -35,7 +35,7 @@ init =() => {
     document.getElementById('back-message').style.display ="none";
     document.getElementById('next-message').style.display ="none";
 };
-
+init();
 //startボタン
 const startClick = () => {
 
