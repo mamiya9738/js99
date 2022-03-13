@@ -34,7 +34,7 @@ const init =() => {
     document.getElementById('next').style.display ="none";
     document.getElementById('back-message').style.display ="none";
     document.getElementById('next-message').style.display ="none";
-};
+}
 init();
 //startボタン
 const startClick = () => {
