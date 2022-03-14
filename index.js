@@ -4,6 +4,11 @@ let viewIndex = 0;
 const endMessage ='おわり';
 const backMessage ='もどる';
 const nextMessage ='すすむ';
+
+const upMessage = 'あがり';
+const downMessage = 'さがり';
+const mixMessage = 'まざり';
+
 const cancelMessage ='キャンセル';
 
 const init =() => {
@@ -99,12 +104,12 @@ const startClick = () => {
     // console.log("--ソート前");
     // console.log(questions);
     //出題形式ごとで配列をそーとする
-    var formatMessage ="あがり";
+    var formatMessage = upMessage;
     if(document.getElementById('btnradio2').checked){
         // さがり
         // console.log("--ソート(さがり)");
         questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
-        formatMessage = "さがり";
+        formatMessage = downMessage;
 
     }else if(document.getElementById('btnradio3').checked){
         // ランダム
@@ -115,7 +120,7 @@ const startClick = () => {
             questions[i] = questions[j];
             questions[j] = tmp;
         }
-        formatMessage = "まざり";
+        formatMessage = mixMessage;
     }
     document.getElementById('format-list-title').textContent += (":" + formatMessage);
 
