@@ -12,9 +12,9 @@ const mixMessage = 'まざり';
 const danMessage = '段';
 const answerMessage = '答え';
 
-const cancelMessage ='キャンセル';
-
-const init =() => {
+const cancelMessage = 'キャンセル';
+const patternMessage = '出し方';
+const init =() => 
 
     questions =[];
     questionsMax = 0;
@@ -27,7 +27,7 @@ const init =() => {
     document.getElementById('back-message').textContent = backMessage;
     document.getElementById('dan-list-title').textContent = danMessage;
     document.getElementById('answer-view-title').textContent = answerMessage;
-    document.getElementById('format-list-title').textContent = "出し方";
+    document.getElementById('format-list-title').textContent = patternMessage;
     document.getElementById('start').textContent = "スタート";
 
 
