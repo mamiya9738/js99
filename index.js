@@ -14,6 +14,7 @@ const answerMessage = '答え';
 
 const cancelMessage = 'キャンセル';
 const patternMessage = '出し方';
+const startMessage = 'スタート';
 const init =() => 
 
     questions =[];
@@ -28,7 +29,7 @@ const init =() =>
     document.getElementById('dan-list-title').textContent = danMessage;
     document.getElementById('answer-view-title').textContent = answerMessage;
     document.getElementById('format-list-title').textContent = patternMessage;
-    document.getElementById('start').textContent = "スタート";
+    document.getElementById('start').textContent = startMessage;
 
 
     document.getElementById('dan-list').style.display ="block";
