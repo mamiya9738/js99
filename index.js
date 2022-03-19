@@ -9,7 +9,7 @@ const upMessage = 'あがり';
 const downMessage = 'さがり';
 const mixMessage = 'まざり';
 
-const dan-me ssage = '段';
+const dan-message = '段';
 const answer-message = '答え';
 
 const cancel-message = 'キャンセル';
