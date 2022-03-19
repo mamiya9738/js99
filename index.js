@@ -9,12 +9,12 @@ const upMessage = 'あがり';
 const downMessage = 'さがり';
 const mixMessage = 'まざり';
 
-const danMessage = '段';
-const answerMessage = '答え';
+const dan-me ssage = '段';
+const answer-message = '答え';
 
-const cancelMessage = 'キャンセル';
-const patternMessage = '出し方';
-const startMessage = 'スタート';
+const cancel-message = 'キャンセル';
+const pattern-message = '出し方';
+const start-message = 'スタート';
 const init =() => 
 
     questions =[];
@@ -24,12 +24,12 @@ const init =() =>
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next-message').textContent = nextMessage;
-    document.getElementById('back-message').textContent = backMessage;
-    document.getElementById('dan-list-title').textContent = danMessage;
-    document.getElementById('answer-view-title').textContent = answerMessage;
-    document.getElementById('format-list-title').textContent = patternMessage;
-    document.getElementById('start').textContent = startMessage;
+    document.getElementById('next-message').textContent = next-message;
+    document.getElementById('back-message').textContent = back-message;
+    document.getElementById('dan-list-title').textContent = dan-message;
+    document.getElementById('answer-view-title').textContent = answer-message;
+    document.getElementById('format-list-title').textContent = pattern-message;
+    document.getElementById('start').textContent = start-message;
 
 
     document.getElementById('dan-list').style.display ="block";
