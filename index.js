@@ -48,7 +48,7 @@ init();
 //startボタン
 const startClick = () => {
 
-    if(document.getElementById('start').textContent === cancelMessage){
+    if(document.getElementById('start').textContent === cancel-message){
         init();
         return;
     }
@@ -80,7 +80,7 @@ const startClick = () => {
       checkIndex++;
     }
     // スタートボタンをキャンセルボタンにする
-    document.getElementById('start').textContent = cancelMessage;
+    document.getElementById('start').textContent = cancel-message;
 
     // 出題形式選択枠を消す
     document.getElementById('dan-list').style.display ="none";
