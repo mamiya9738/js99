@@ -9,12 +9,12 @@ const upMessage = 'あがり';
 const downMessage = 'さがり';
 const mixMessage = 'まざり';
 
-const dan-message = '段';
-const answer-message = '答え';
+const dan_message = '段';
+const answer_message = '答え';
 
-const cancel-message = 'キャンセル';
-const pattern-message = '出し方';
-const start-message = 'スタート';
+const cancel_message = 'キャンセル';
+const pattern_message = '出し方';
+const start_message = 'スタート';
 const init =() => 
 
     questions =[];
@@ -24,12 +24,12 @@ const init =() =>
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next-message').textContent = next-message;
-    document.getElementById('back-message').textContent = back-message;
-    document.getElementById('dan-list-title').textContent = dan-message;
-    document.getElementById('answer-view-title').textContent = answer-message;
-    document.getElementById('format-list-title').textContent = pattern-message;
-    document.getElementById('start').textContent = start-message;
+    document.getElementById('next-message').textContent = next_message;
+    document.getElementById('back-message').textContent = back_message;
+    document.getElementById('dan-list-title').textContent = dan_message;
+    document.getElementById('answer-view-title').textContent = answer_message;
+    document.getElementById('format-list-title').textContent = pattern_message;
+    document.getElementById('start').textContent = start_message;
 
 
     document.getElementById('dan-list').style.display ="block";
@@ -48,7 +48,7 @@ init();
 //startボタン
 const startClick = () => {
 
-    if(document.getElementById('start').textContent === cancel-message){
+    if(document.getElementById('start').textContent === cancel_message){
         init();
         return;
     }
@@ -80,7 +80,7 @@ const startClick = () => {
       checkIndex++;
     }
     // スタートボタンをキャンセルボタンにする
-    document.getElementById('start').textContent = cancel-message;
+    document.getElementById('start').textContent = cancel_message;
 
     // 出題形式選択枠を消す
     document.getElementById('dan-list').style.display ="none";
