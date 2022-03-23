@@ -15,8 +15,7 @@ const answer_message = '答え';
 const cancel_message = 'キャンセル';
 const pattern_message = '出し方';
 const start_message = 'スタート';
-const init =() => 
-{
+const init =() =>{
     questions =[];
     questionsMax = 0;
     viewIndex = 0;
