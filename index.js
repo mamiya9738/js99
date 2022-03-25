@@ -23,8 +23,8 @@ const init =() =>{
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next-message').textContent = next_message;
-    document.getElementById('back-message').textContent = back_message;
+    document.getElementById('next-message').textContent = nextMessage;
+    document.getElementById('back-message').textContent = backMessage;
     document.getElementById('dan-list-title').textContent = dan_message;
     document.getElementById('answer-view-title').textContent = answer_message;
     document.getElementById('format-list-title').textContent = pattern_message;
