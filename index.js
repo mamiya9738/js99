@@ -7,7 +7,7 @@ const nextMessage ='すすむ';
 
 const upMessage = 'あがり';
 const downMessage = 'さがり';
-const mixMessage = 'まざり';
+const mix_message = 'まざり';
 
 const dan_message = '段';
 const answer_message = '答え';
@@ -123,7 +123,7 @@ const startClick = () => {
             questions[i] = questions[j];
             questions[j] = tmp;
         }
-        formatMessage = mixMessage;
+        formatMessage = mix_message;
     }
     document.getElementById('format-list-title').textContent += (":" + formatMessage);
 
