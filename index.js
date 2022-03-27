@@ -6,7 +6,7 @@ const backMessage ='もどる';
 const nextMessage ='すすむ';
 
 const upMessage = 'あがり';
-const downMessage = 'さがり';
+const down_message = 'さがり';
 const mix_message = 'まざり';
 
 const dan_message = '段';
@@ -112,7 +112,7 @@ const startClick = () => {
         // さがり
         // console.log("--ソート(さがり)");
         questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
-        formatMessage = downMessage;
+        formatMessage = down_message;
 
     }else if(document.getElementById('btnradio3').checked){
         // ランダム
