@@ -3,7 +3,7 @@ let questionsMax = 0;
 let viewIndex = 0;
 const endMessage ='おわり';
 const backMessage ='もどる';
-const nextMessage ='すすむ';
+const next_message ='すすむ';
 
 const up_message = 'あがり';
 const down_message = 'さがり';
@@ -162,7 +162,7 @@ const setQuestion = (viewIndex) => {
 const backClick = () => {
     if(viewIndex > 0){
         setQuestion(--viewIndex);
-        document.getElementById('next-message').textContent = nextMessage;
+        document.getElementById('next-message').textContent = next_message;
     }
 }
 
