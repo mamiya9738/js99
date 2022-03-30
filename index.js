@@ -2,7 +2,7 @@ let questions =[];
 let questionsMax = 0;
 let viewIndex = 0;
 const endMessage ='おわり';
-const backMessage ='もどる';
+const back_message ='もどる';
 const next_message ='すすむ';
 
 const up_message = 'あがり';
@@ -24,7 +24,7 @@ const init =() =>{
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
     document.getElementById('next-message').textContent = nextMessage;
-    document.getElementById('back-message').textContent = backMessage;
+    document.getElementById('back-message').textContent = back_message;
     document.getElementById('dan-list-title').textContent = dan_message;
     document.getElementById('answer-view-title').textContent = answer_message;
     document.getElementById('format-list-title').textContent = pattern_message;
