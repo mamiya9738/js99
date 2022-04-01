@@ -1,7 +1,7 @@
 let questions =[];
 let questionsMax = 0;
 let viewIndex = 0;
-const endMessage ='おわり';
+const end_message ='おわり';
 const back_message ='もどる';
 const next_message ='すすむ';
 
@@ -171,7 +171,7 @@ const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
     // 終わりボタンをクリックしていたら
-    if(document.getElementById('next-message').textContent === endMessage){
+    if(document.getElementById('next-message').textContent === end_message){
         init();
         return;
     }
