@@ -1,6 +1,6 @@
 let questions =[];
 let questionsMax = 0;
-let viewIndex = 0;
+let view_index = 0;
 const end_message ='おわり';
 const back_message ='もどる';
 const next_message ='すすむ';
@@ -145,7 +145,7 @@ const getAnswer = (question) => {
 }
 
 // 問題文の表示
-const setQuestion = (viewIndex) => {
+const setQuestion = (view_index) => {
     if(questions.length > 0){
         document.getElementById('question-message').textContent = getQuestion(questions[viewIndex]);
         if(document.getElementById('answer-view-on').checked){
