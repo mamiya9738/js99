@@ -53,7 +53,7 @@ const startClick = () => {
     }
 
     // チェックボックス群を変数に入れる
-    const max = 9;
+    const max = 10;
     const $checkElements = document.getElementsByClassName("q-check");
 
     const checkLen = $checkElements.length;
@@ -72,8 +72,8 @@ const startClick = () => {
         document.getElementById('dan-list-title').textContent += context + (checkIndex + 1) + " ";
 
         // 問題を作成し、配列に入れる
-        for(let i = 0; i < max ;i++){
-            questions[questionsMax++] = [checkIndex + 1 , i + 1];            
+        for(let i = 1; i < max ;i++){
+            questions[questionsMax++] = [checkIndex + 1 , i ];            
           }
       }
       checkIndex++;
