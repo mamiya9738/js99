@@ -1,4 +1,4 @@
-let questions =[];
+let questions = [];
 let questions_max = 0;
 let view_index = 0;
 const end_message ='おわり';
@@ -23,7 +23,7 @@ const init = () =>{
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
-    document.getElementById('next-message').textContent = nextMessage;
+    document.getElementById('next-message').textContent = next_message;
     document.getElementById('back-message').textContent = back_message;
     document.getElementById('dan-list-title').textContent = dan_message;
     document.getElementById('answer-view-title').textContent = answer_message;
