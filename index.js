@@ -151,7 +151,7 @@ const setQuestion = (view_index) => {
         if(document.getElementById('answer-view-on').checked){
             document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
         }
-        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questionsMax;
+        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questions_max;
     }else{
         alert("1から9までをえらんでください");
         init();
