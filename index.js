@@ -1,5 +1,5 @@
 let questions = [];
-let questions_max = 0;
+let questionsMax = 0;
 let view_index = 0;
 const end_message ='おわり';
 const back_message ='もどる';
@@ -66,7 +66,7 @@ const startClick = () => {
       if($checkElements[checkIndex].checked){
         var context = ",";
         // 段の枠に選択数値を表示させる
-        if(questions_max == 0){
+        if(questionsMax == 0){
             context = ";";
         }
         document.getElementById('dan-list-title').textContent += context + (checkIndex + 1) + " ";
