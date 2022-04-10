@@ -1,7 +1,7 @@
 let questions = [];
 let questionsMax = 0;
 let viewIndex = 0;
-const end_message ='おわり';
+const endMessage ='おわり';
 const back_message ='もどる';
 const next_message ='すすむ';
 
@@ -151,7 +151,7 @@ const setQuestion = (viewIndex) => {
         if(document.getElementById('answer-view-on').checked){
             document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
         }
-        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questions_max;
+        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questionsMax;
     }else{
         alert("1から9までをえらんでください");
         init();
@@ -171,7 +171,7 @@ const nextClick = () => {
     console.log(viewIndex);
     console.log(questionsMax);
     // 終わりボタンをクリックしていたら
-    if(document.getElementById('next-message').textContent === end_message){
+    if(document.getElementById('next-message').textContent === endMessage){
         init();
         return;
     }
