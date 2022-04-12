@@ -5,7 +5,7 @@ const endMessage ='おわり';
 const backMessage ='もどる';
 const nextMessage ='すすむ';
 
-const up_message = 'あがり';
+const upMessage = 'あがり';
 const down_message = 'さがり';
 const mix_message = 'まざり';
 
@@ -107,7 +107,7 @@ const startClick = () => {
     // console.log("--ソート前");
     // console.log(questions);
     //出題形式ごとで配列をそーとする
-    var formatMessage = up_message;
+    var formatMessage = upMessage;
     if(document.getElementById('btnradio2').checked){
         // さがり
         // console.log("--ソート(さがり)");
