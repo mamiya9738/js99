@@ -9,7 +9,7 @@ const upMessage = 'あがり';
 const downMessage = 'さがり';
 const mixMessage = 'まざり';
 
-const dan_message = '段';
+const danMessage = '段';
 const answer_message = '答え';
 
 const cancel_message = 'キャンセル';
@@ -25,7 +25,7 @@ const init = () =>{
     document.getElementById('info-message').textContent = "";
     document.getElementById('next-message').textContent = nextMessage;
     document.getElementById('back-message').textContent = backMessage;
-    document.getElementById('dan-list-title').textContent = dan_message;
+    document.getElementById('dan-list-title').textContent = danMessage;
     document.getElementById('answer-view-title').textContent = answer_message;
     document.getElementById('format-list-title').textContent = pattern_message;
     document.getElementById('start').textContent = start_message;
