@@ -12,7 +12,7 @@ const mixMessage = 'まざり';
 const danMessage = '段';
 const answerMessage = '答え';
 
-const cancel_message = 'キャンセル';
+const cancelMessage = 'キャンセル';
 const pattern_message = '出し方';
 const start_message = 'スタート';
 const init = () =>{
@@ -47,7 +47,7 @@ init();
 //startボタン
 const startClick = () => {
 
-    if(document.getElementById('start').textContent === cancel_message){
+    if(document.getElementById('start').textContent === cancelMessage){
         init();
         return;
     }
@@ -79,7 +79,7 @@ const startClick = () => {
       checkIndex++;
     }
     // スタートボタンをキャンセルボタンにする
-    document.getElementById('start').textContent = cancel_message;
+    document.getElementById('start').textContent = cancelMessage;
 
     // 出題形式選択枠を消す
     document.getElementById('dan-list').style.display ="none";
