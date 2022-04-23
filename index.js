@@ -82,22 +82,22 @@ const startClick = () => {
     document.getElementById('start').textContent = cancelMessage;
 
     // 出題形式選択枠を消す
-    document.getElementById('dan-list').style.display ="none";
-    document.getElementById('format-list').style.display ="none";
-    document.getElementById('answer-view').style.display ="none";
+    document.getElementById('dan-list').style.display = "none";
+    document.getElementById('format-list').style.display = "none";
+    document.getElementById('answer-view').style.display = "none";
     
 
     // 出題ボタンとか出す
-    document.getElementById('question').style.display ="block";
-    document.getElementById('info').style.display ="block";
-    document.getElementById('back').style.display ="block";
-    document.getElementById('next').style.display ="block";
-    document.getElementById('back-message').style.display ="block";
-    document.getElementById('next-message').style.display ="block";
+    document.getElementById('question').style.display = "block";
+    document.getElementById('info').style.display = "block";
+    document.getElementById('back').style.display = "block";
+    document.getElementById('next').style.display = "block";
+    document.getElementById('back-message').style.display = "block";
+    document.getElementById('next-message').style.display = "block";
 
     // 答え出す時だけ回答枠表示
     if(document.getElementById('answer-view-on').checked){
-        document.getElementById('answer').style.display ="block";
+        document.getElementById('answer').style.display = "block";
         document.getElementById('answer-view-title').textContent += (":あり");
     }else{
         document.getElementById('answer-view-title').textContent += (":なし");
@@ -151,7 +151,7 @@ const setQuestion = (viewIndex) => {
         if(document.getElementById('answer-view-on').checked){
             document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
         }
-        document.getElementById('info-message').textContent = viewIndex+1 + '/' + questionsMax;
+        document.getElementById('info-message').textContent = viewIndex + 1  + '/' + questionsMax;
     }else{
         alert("1から9までをえらんでください");
         init();
@@ -162,7 +162,7 @@ const setQuestion = (viewIndex) => {
 const backClick = () => {
     if(viewIndex > 0){
         setQuestion(--viewIndex);
-        document.getElementById('next-message').textContent = next_message;
+        document.getElementById('next-message').textContent = nextMessage;
     }
 }
 
