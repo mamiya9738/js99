@@ -15,6 +15,7 @@ const answerMessage = '答え';
 const cancelMessage = 'キャンセル';
 const patternMessage = '出し方';
 const startMessage = 'スタート';
+
 const init = () =>{
     questions = [];
     questionsMax = 0;
@@ -61,7 +62,7 @@ const startClick = () => {
 
     // チェックボックスがONの段を配列に登録
     while(checkIndex < checkLen){
-      console.log(checkIndex +','+$checkElements[checkIndex].checked);
+      console.log(checkIndex + ',' + $checkElements[checkIndex].checked);
 
       if($checkElements[checkIndex].checked){
         var context = ",";
@@ -142,7 +143,7 @@ const getQuestion = (question) => {
 // 回答の設定
 const getAnswer = (question) => {
     return '回答:' + question[0] * question[1]; 
-}
+} 
 
 // 問題文の表示
 const setQuestion = (viewIndex) => {
