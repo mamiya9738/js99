@@ -32,8 +32,8 @@ const init = () =>{
     document.getElementById('start').textContent = startMessage; 
 
 
-    document.getElementById('dan-list').style.display ="block";
-    document.getElementById('format-list').style.display ="block";
+    document.getElementById('dan-list').style.display = "block";
+    document.getElementById('format-list').style.display = "block";
     document.getElementById('answer-view').style.display ="block";
     document.getElementById('start').style.display ="block";
     document.getElementById('question').style.display ="none";
