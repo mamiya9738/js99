@@ -49,9 +49,12 @@ init();
 const startClick = () => {
 
     if(document.getElementById('start').textContent === cancelMessage){
+        
+    if(confirm('キャンセルしますか？')){
         init();
         return;
     }
+  }
 
     // チェックボックス群を変数に入れる
     const max = 10;
