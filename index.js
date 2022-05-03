@@ -27,7 +27,7 @@ const init = () =>{
     document.getElementById('next-message').textContent = nextMessage;
     document.getElementById('back-message').textContent = backMessage;
     document.getElementById('dan-list-title').textContent = danMessage;
-    document.getElementById('answer -view-title').textContent = answerMessage;
+    document.getElementById('answer-view-title').textContent = answerMessage;
     document.getElementById('format-list-title').textContent = patternMessage;
     document.getElementById('start').textContent = startMessage; 
 
