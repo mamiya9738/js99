@@ -50,8 +50,9 @@ const startClick = () => {
 
     if(document.getElementById('start').textContent === cancelMessage){
         
-    if(confirm('キャンセルしますか？')){
-        init();
+        if(confirm('キャンセルしますか？')){
+           init();
+        }
         return;
     }
   }
