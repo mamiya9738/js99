@@ -55,7 +55,6 @@ const startClick = () => {
         }
         return;
     }
-  }
 
     // チェックボックス群を変数に入れる
     const max = 10;
