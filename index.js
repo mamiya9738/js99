@@ -71,7 +71,7 @@ const startClick = () => {
         var context = ",";
         // 段の枠に選択数値を表示させる
         if(questionsMax == 0){
-            context = ";";
+            context = ":";
         }
         document.getElementById('dan-list-title').textContent += context + (checkIndex + 1) + " ";
 
