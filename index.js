@@ -115,7 +115,7 @@ const startClick = () => {
     if(document.getElementById('btnradio2').checked){
         // さがり
         // console.log("--ソート(さがり)");
-        questions.sort((a, b) => (b[0]*10+b[1]) - (a[0]*10+a[1]));
+        questions.sort((a, b) => ( ToNumber(b)  -  ToNumber(a)));
         formatMessage = downMessage;
 
     }else if(document.getElementById('btnradio3').checked){
@@ -136,6 +136,9 @@ const startClick = () => {
     // 出題
     viewIndex = 0;
     setQuestion(viewIndex);
+}
+const ToNumber = (x) => {
+    return x[0] * 10 + x[1];
 }
 
 // 問題文の設定
