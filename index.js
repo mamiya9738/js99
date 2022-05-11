@@ -100,12 +100,12 @@ const startClick = () => {
     document.getElementById('next-message').style.display = "block";
 
     // 答え出す時だけ回答枠表示
-    var answerViewTitle = (":なし");
+    var answerViewTitle = ("なし");
     if(document.getElementById('answer-view-on').checked){
         document.getElementById('answer').style.display = "block";
-        answerViewTitle = (":あり");
+        answerViewTitle = ("あり");
     }
-    document.getElementById('answer-view-title').textContent += answerViewTitle;
+    document.getElementById('answer-view-title').textContent += ":" + answerViewTitle;
 
     // 出題形式
     // console.log("--ソート前");
