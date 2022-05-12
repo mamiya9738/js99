@@ -31,7 +31,6 @@ const init = () =>{
     document.getElementById('format-list-title').textContent = patternMessage;
     document.getElementById('start').textContent = startMessage; 
 
-
     document.getElementById('dan-list').style.display = "block";
     document.getElementById('format-list').style.display = "block";
     document.getElementById('answer-view').style.display ="block";
@@ -90,7 +89,6 @@ const startClick = () => {
     document.getElementById('format-list').style.display = "none";
     document.getElementById('answer-view').style.display = "none";
     
-
     // 出題ボタンとか出す
     document.getElementById('question').style.display = "block";
     document.getElementById('info').style.display = "block";
@@ -110,7 +108,7 @@ const startClick = () => {
     // 出題形式
     // console.log("--ソート前");
     // console.log(questions);
-    //出題形式ごとで配列をそーとする
+    // 出題形式ごとで配列をそーとする
     var formatMessage = upMessage;
     if(document.getElementById('btnradio2').checked){
         // さがり
@@ -143,7 +141,7 @@ const ToNumber = (x) => {
 
 // 問題文の設定
 const getQuestion = (question) => {
-    return '問題：' + question[0] + '×' + question[1]; 
+    return '問題:' + question[0] + '×' + question[1]; 
 }
 
 // 回答の設定
