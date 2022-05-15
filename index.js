@@ -11,6 +11,8 @@ const mixMessage = 'まざり';
 
 const danMessage = '段';
 const answerMessage = '答え';
+const separation = '：';
+
 
 const cancelMessage = 'キャンセル';
 const patternMessage = '出し方';
@@ -103,7 +105,7 @@ const startClick = () => {
         document.getElementById('answer').style.display = "block";
         answerViewTitle = ("あり");
     }
-    document.getElementById('answer-view-title').textContent += ":" + answerViewTitle;
+    document.getElementById('answer-view-title').textContent += separation + answerViewTitle;
 
     // 出題形式
     // console.log("--ソート前");
@@ -127,7 +129,7 @@ const startClick = () => {
         }
         formatMessage = mixMessage;
     }
-    document.getElementById('format-list-title').textContent += (":" + formatMessage);
+    document.getElementById('format-list-title').textContent += (separation + formatMessage);
 
     // console.log("--ソート後");
     // console.log(questions);
