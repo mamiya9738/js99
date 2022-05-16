@@ -91,7 +91,7 @@ const startClick = () => {
     document.getElementById('format-list').style.display = "none";
     document.getElementById('answer-view').style.display = "none";
     
-    // 出題ボタンとか出す
+    // 出題ボタンとか出す　　　
     document.getElementById('question').style.display = "block";
     document.getElementById('info').style.display = "block";
     document.getElementById('back').style.display = "block";
