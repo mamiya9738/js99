@@ -143,7 +143,7 @@ const ToNumber = (x) => {
 
 // 問題文の設定
 const getQuestion = (question) => {
-    return '問題:' + question[0] + '×' + question[1]; 
+    return '問題' + separation + question[0] + '×' + question[1]; 
 }
 
 // 回答の設定
