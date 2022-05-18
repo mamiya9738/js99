@@ -148,7 +148,7 @@ const getQuestion = (question) => {
 
 // 回答の設定
 const getAnswer = (question) => {
-    return '回答:' + question[0] * question[1]; 
+    return '回答' + separation + question[0] * question[1]; 
 } 
 
 // 問題文の表示
