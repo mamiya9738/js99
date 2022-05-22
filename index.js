@@ -45,7 +45,9 @@ const init = () =>{
     document.getElementById('back-message').style.display ="none";
     document.getElementById('next-message').style.display ="none";
 }
+
 init();
+
 //startボタン
 const startClick = () => {
 
@@ -137,6 +139,7 @@ const startClick = () => {
     viewIndex = 0;
     setQuestion(viewIndex);
 }
+
 const ToNumber = (x) => {
     return x[0] * 10 + x[1];
 }
