@@ -69,12 +69,12 @@ const startClick = () => {
     // チェックボックスがONの段を配列に登録
     while(checkIndex < checkLen){
       console.log(checkIndex + ',' + $checkElements[checkIndex].checked);
-
+;
       if($checkElements[checkIndex].checked){
         var context = ",";
         // 段の枠に選択数値を表示させる
         if(questionsMax == 0){
-            context = ":";
+            context = separation;
         }
         document.getElementById('dan-list-title').textContent += context + (checkIndex + 1) + " ";
 
