@@ -1,6 +1,7 @@
 let questions = [];
 let questionsMax = 0;
 let viewIndex = 0;
+
 const endMessage ='おわり';
 const backMessage ='もどる';
 const nextMessage ='すすむ';
