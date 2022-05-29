@@ -163,7 +163,9 @@ const setQuestion = (viewIndex) => {
             document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
         }
         document.getElementById('info-message').textContent = viewIndex + 1  + '/' + questionsMax;
-    }else{
+    }
+    else
+    {
         alert("1から9までをえらんでください");
        // init();
     }
