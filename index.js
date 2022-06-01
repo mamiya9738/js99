@@ -188,7 +188,7 @@ const nextClick = () => {
         init();
         return;
     }
-    viewIndex +=1; 
+    viewIndex += 1; 
     if(viewIndex < questions.length){
         setQuestion(viewIndex);
         // 最後の表示内容になったときは「次へ」ボタンを終わりボタンに変更する
