@@ -181,8 +181,8 @@ const backClick = () => {
 
 // nextボタン
 const nextClick = () => {
-    console.log(viewIndex);
-    console.log(questionsMax);
+    // console.log(viewIndex);
+    // console.log(questionsMax);
     // 終わりボタンをクリックしていたら
     if(document.getElementById('next-message').textContent === endMessage){
         init();
