@@ -36,13 +36,13 @@ const init = () =>{
 
     document.getElementById('dan-list').style.display = "block";
     document.getElementById('format-list').style.display = "block";
-    document.getElementById('answer-view').style.display ="block";
-    document.getElementById('start').style.display ="block";
-    document.getElementById('question').style.display ="none";
-    document.getElementById('answer').style.display ="none";
-    document.getElementById('info').style.display ="none";
-    document.getElementById('back').style.display ="none";
-    document.getElementById('next').style.display ="none";
+    document.getElementById('answer-view').style.display = "block";
+    document.getElementById('start').style.display = "block";
+    document.getElementById('question').style.display = "none";
+    document.getElementById('answer').style.display = "none";
+    document.getElementById('info').style.display = "none";
+    document.getElementById('back').style.display = "none";
+    document.getElementById('next').style.display = "none";
     document.getElementById('back-message').style.display ="none";
     document.getElementById('next-message').style.display ="none";
 }
