@@ -51,7 +51,6 @@ init();
 
 //startボタン
 const startClick = () => {
-
     if(document.getElementById('start').textContent === cancelMessage){
         
         if(confirm('キャンセルしますか？')){
@@ -86,6 +85,7 @@ const startClick = () => {
       }
       checkIndex++;
     }
+
     // スタートボタンをキャンセルボタンにする
     document.getElementById('start').textContent = cancelMessage;
 
