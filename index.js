@@ -118,7 +118,7 @@ const startClick = () => {
     if(document.getElementById('btnradio2').checked){
         // さがり
         // console.log("--ソート(さがり)");
-        questions.sort((a, b) => ( ToNumber(b)  -  ToNumber(a)));
+        questions.sort((a, b) => ( ToNumber(b) - ToNumber(a)));
         formatMessage = downMessage;
 
     }else if(document.getElementById('btnradio3').checked){
