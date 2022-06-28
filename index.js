@@ -1,3 +1,4 @@
+
 let questions = [];
 let questionsMax = 0;
 let viewIndex = 0;
@@ -49,7 +50,7 @@ const init = () =>{
 
 init();
 
-//startボタン
+// startボタン
 const startClick = () => {
     if(document.getElementById('start').textContent === cancelMessage){
         
