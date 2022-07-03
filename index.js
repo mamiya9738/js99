@@ -44,8 +44,8 @@ const init = () =>{
     document.getElementById('info').style.display = "none";
     document.getElementById('back').style.display = "none";
     document.getElementById('next').style.display = "none";
-    document.getElementById('back-message').style.display ="none";
-    document.getElementById('next-message').style.display ="none";
+    document.getElementById('back-message').style.display = "none";
+    document.getElementById('next-message').style.display = "none";
 }
 
 init();
