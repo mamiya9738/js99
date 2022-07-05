@@ -109,6 +109,7 @@ const startClick = () => {
         document.getElementById('answer').style.display = "block";
         answerViewTitle = ("あり");
     }
+
     document.getElementById('answer-view-title').textContent += separation + answerViewTitle;
 
     // 出題形式
