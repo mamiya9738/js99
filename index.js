@@ -189,6 +189,7 @@ const nextClick = () => {
         init();
         return;
     }
+
     viewIndex += 1; 
     if(viewIndex < questions.length){
         setQuestion(viewIndex);
