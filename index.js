@@ -175,7 +175,7 @@ const setQuestion = (viewIndex) => {
 // backボタン
 const backClick = () => {
     if(viewIndex > 0){
-        setQuestion(--viewIndex);
+        setQuestion( --viewIndex );
         document.getElementById('next-message').textContent = nextMessage;
     }
 }
