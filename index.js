@@ -1,9 +1,11 @@
+
 let questions = [];
 let questionsMax = 0;
 let viewIndex = 0;
-const endMessage ='おわり';
-const backMessage ='もどる';
-const nextMessage ='すすむ';
+
+const endMessage = 'おわり';
+const backMessage = 'もどる';
+const nextMessage = 'すすむ';
 
 const upMessage = 'あがり';
 const downMessage = 'さがり';
@@ -35,20 +37,21 @@ const init = () =>{
 
     document.getElementById('dan-list').style.display = "block";
     document.getElementById('format-list').style.display = "block";
-    document.getElementById('answer-view').style.display ="block";
-    document.getElementById('start').style.display ="block";
-    document.getElementById('question').style.display ="none";
-    document.getElementById('answer').style.display ="none";
-    document.getElementById('info').style.display ="none";
-    document.getElementById('back').style.display ="none";
-    document.getElementById('next').style.display ="none";
-    document.getElementById('back-message').style.display ="none";
-    document.getElementById('next-message').style.display ="none";
+    document.getElementById('answer-view').style.display = "block";
+    document.getElementById('start').style.display = "block";
+    document.getElementById('question').style.display = "none";
+    document.getElementById('answer').style.display = "none";
+    document.getElementById('info').style.display = "none";
+    document.getElementById('back').style.display = "none";
+    document.getElementById('next').style.display = "none";
+    document.getElementById('back-message').style.display = "none";
+    document.getElementById('next-message').style.display = "none";
 }
-init();
-//startボタン
-const startClick = () => {
 
+init();
+
+// startボタン
+const startClick = () => {
     if(document.getElementById('start').textContent === cancelMessage){
         
         if(confirm('キャンセルしますか？')){
@@ -72,17 +75,18 @@ const startClick = () => {
         var context = ",";
         // 段の枠に選択数値を表示させる
         if(questionsMax == 0){
-            context = ":";
+            context = separation;
         }
         document.getElementById('dan-list-title').textContent += context + (checkIndex + 1) + " ";
 
         // 問題を作成し、配列に入れる
-        for(let i = 1; i < max ;i++){
+        for(let i = 1 ; i < max ; i++){
             questions[questionsMax++] = [checkIndex + 1 , i ];            
         }
       }
       checkIndex++;
     }
+
     // スタートボタンをキャンセルボタンにする
     document.getElementById('start').textContent = cancelMessage;
 
@@ -91,7 +95,7 @@ const startClick = () => {
     document.getElementById('format-list').style.display = "none";
     document.getElementById('answer-view').style.display = "none";
     
-    // 出題ボタンとか出す
+    // 出題ボタンとか出す　　　
     document.getElementById('question').style.display = "block";
     document.getElementById('info').style.display = "block";
     document.getElementById('back').style.display = "block";
@@ -115,7 +119,7 @@ const startClick = () => {
     if(document.getElementById('btnradio2').checked){
         // さがり
         // console.log("--ソート(さがり)");
-        questions.sort((a, b) => ( ToNumber(b)  -  ToNumber(a)));
+        questions.sort((a, b) => ( ToNumber(b) - ToNumber(a)));
         formatMessage = downMessage;
 
     }else if(document.getElementById('btnradio3').checked){
@@ -137,18 +141,19 @@ const startClick = () => {
     viewIndex = 0;
     setQuestion(viewIndex);
 }
+
 const ToNumber = (x) => {
     return x[0] * 10 + x[1];
 }
 
 // 問題文の設定
 const getQuestion = (question) => {
-    return '問題:' + question[0] + '×' + question[1]; 
+    return '問題' + separation + question[0] + '×' + question[1]; 
 }
 
 // 回答の設定
 const getAnswer = (question) => {
-    return '回答:' + question[0] * question[1]; 
+    return '回答' + separation + question[0] * question[1]; 
 } 
 
 // 問題文の表示
@@ -159,7 +164,9 @@ const setQuestion = (viewIndex) => {
             document.getElementById('answer-message').textContent = getAnswer(questions[viewIndex]);
         }
         document.getElementById('info-message').textContent = viewIndex + 1  + '/' + questionsMax;
-    }else{
+    }
+    else
+    {
         alert("1から9までをえらんでください");
        // init();
     }
@@ -168,21 +175,23 @@ const setQuestion = (viewIndex) => {
 // backボタン
 const backClick = () => {
     if(viewIndex > 0){
-        setQuestion(--viewIndex);
+        setQuestion( --viewIndex );
         document.getElementById('next-message').textContent = nextMessage;
     }
 }
 
 // nextボタン
 const nextClick = () => {
-    console.log(viewIndex);
-    console.log(questionsMax);
+    // console.log(viewIndex);
+    // console.log(questionsMax);
     // 終わりボタンをクリックしていたら
     if(document.getElementById('next-message').textContent === endMessage){
         init();
         return;
     }
-    if(++viewIndex < questions.length){
+
+    viewIndex += 1; 
+    if(viewIndex < questions.length){
         setQuestion(viewIndex);
         // 最後の表示内容になったときは「次へ」ボタンを終わりボタンに変更する
         if(viewIndex + 1 == questions.length){
