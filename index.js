@@ -24,6 +24,26 @@ const init = () =>{
     questions = [];
     questionsMax = 0;
     viewIndex = 0;
+    
+    var arr =["1","2","3","4","5","6","7","8","9"];
+    const divNum = document.getElementById("num");
+        arr.forEach(element => {
+//            <input type="checkbox" class="btn-check q-check" id="btncheck1" autocomplete="off" checked >  
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.classList.add("btn-check");
+            input.classList.add("q-check");
+            input.autocomplete = "off";
+            input.id = "btncheck"+element;
+            divNum.appendChild(input);
+//            <label class="btn btn-outline-secondary" for="btncheck1">１</label>
+            const label = document.createElement("label");
+            label.classList.add("btn");
+            label.classList.add("btn-outline-secondary");
+            label.htmlFor = "btncheck"+element;
+            label.innerText = element;
+            divNum.appendChild(label);
+        });
 
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
