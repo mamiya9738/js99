@@ -27,6 +27,7 @@ const init = () =>{
 
     var arr =["1","2","3","4","5","6","7","8","9"];
     const divNum = document.getElementById("num");
+    if(divNum.childElementCount == 0){
         arr.forEach(element => {
 //            <input type="checkbox" class="btn-check q-check" id="btncheck1" autocomplete="off" checked >  
             const input = document.createElement("input");
@@ -44,7 +45,7 @@ const init = () =>{
             label.innerText = element;
             divNum.appendChild(label);
         });
-
+    }
     document.getElementById('question-message').textContent = "";
     document.getElementById('answer-message').textContent = "";
     document.getElementById('info-message').textContent = "";
