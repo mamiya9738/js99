@@ -24,7 +24,7 @@ const init = () =>{
     questions = [];
     questionsMax = 0;
     viewIndex = 0;
-    
+
     var arr =["1","2","3","4","5","6","7","8","9"];
     const divNum = document.getElementById("num");
         arr.forEach(element => {
@@ -188,7 +188,7 @@ const setQuestion = (viewIndex) => {
     else
     {
         alert("1から9までをえらんでください");
-       // init();
+       init();
     }
 }
 
